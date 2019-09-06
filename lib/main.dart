@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_app/models/cart_model.dart';
+import 'package:shop_app/models/product_model.dart';
 import 'package:shop_app/screens/cart_screen.dart';
 import 'package:shop_app/screens/home_screen.dart';
 
-void main() => runApp(App());
+void main() => runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(builder: (context) => CartModel()),
+        ChangeNotifierProvider(builder: (context) => ProductModel()),
+      ],
+      child: App(),
+    ));
 
 class App extends StatelessWidget {
   @override
