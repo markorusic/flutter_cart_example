@@ -6,23 +6,20 @@ class Product {
   String name;
   String description;
   String photoUrl;
-  String slug;
-  int ordering;
   bool featured;
   int categoryId;
 
-  Product(
-      {this.id,
-      this.createdAt,
-      this.updatedAt,
-      this.price,
-      this.name,
-      this.description,
-      this.photoUrl,
-      this.slug,
-      this.ordering,
-      this.featured,
-      this.categoryId});
+  Product({
+    this.id,
+    this.createdAt,
+    this.updatedAt,
+    this.price,
+    this.name,
+    this.description,
+    this.photoUrl,
+    this.featured,
+    this.categoryId,
+  });
 
   Product.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -32,8 +29,6 @@ class Product {
     name = json['name'];
     description = json['description'];
     photoUrl = json['photo_url'];
-    slug = json['slug'];
-    ordering = json['ordering'];
     featured = json['featured'];
     categoryId = json['category_id'];
   }
@@ -47,8 +42,6 @@ class Product {
     data['name'] = this.name;
     data['description'] = this.description;
     data['photo_url'] = this.photoUrl;
-    data['slug'] = this.slug;
-    data['ordering'] = this.ordering;
     data['featured'] = this.featured;
     data['category_id'] = this.categoryId;
     return data;
