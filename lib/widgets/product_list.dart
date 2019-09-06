@@ -12,33 +12,40 @@ class ProductList extends StatelessWidget {
     return Consumer<CartModel>(
       builder: (context, cartModel, child) {
         final inCart = cartModel.inCart(product);
-        return Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.red,
-              width: 1,
-              style: BorderStyle.solid,
+        return Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.grey[400],
+                width: 1,
+                style: BorderStyle.solid,
+              ),
             ),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image.network(
-                product.photoUrl,
-                width: 180,
-              ),
-              Text(
-                product.name,
-              ),
-              IconButton(
-                icon: Icon(inCart
-                    ? Icons.remove_shopping_cart
-                    : Icons.add_shopping_cart),
-                onPressed: () {
-                  cartModel.toggle(product);
-                },
-              )
-            ],
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                FadeInImage.assetNetwork(
+                  placeholder: 'assets/loading.gif',
+                  image: product.photoUrl,
+                  width: 150,
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 8),
+                  child: Text(product.name),
+                ),
+                IconButton(
+                  icon: Icon(
+                    inCart
+                        ? Icons.remove_shopping_cart
+                        : Icons.add_shopping_cart,
+                  ),
+                  onPressed: () {
+                    cartModel.toggle(product);
+                  },
+                )
+              ],
+            ),
           ),
         );
       },

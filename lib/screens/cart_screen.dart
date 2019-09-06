@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_app/models/cart_model.dart';
+import 'package:shop_app/widgets/product_list.dart';
 
 class CartScreen extends StatelessWidget {
   @override
@@ -10,7 +13,10 @@ class CartScreen extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text('cart screen'),
+          child: Consumer<CartModel>(
+            builder: (context, cartModel, child) =>
+                ProductList(cartModel.products),
+          ),
         ),
       ),
     );
