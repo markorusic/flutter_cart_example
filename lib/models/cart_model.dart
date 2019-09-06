@@ -18,4 +18,16 @@ class CartModel extends ChangeNotifier {
     products.remove(product);
     notifyListeners();
   }
+
+  bool inCart(Product product) {
+    return products.contains(product);
+  }
+
+  void toggle(Product product) {
+    if (inCart(product)) {
+      remove(product);
+    } else {
+      add(product);
+    }
+  }
 }

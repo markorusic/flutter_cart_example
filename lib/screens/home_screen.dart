@@ -2,7 +2,9 @@ import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shop_app/models/cart_model.dart';
 import 'package:shop_app/models/product_model.dart';
+import 'package:shop_app/widgets/product_list.dart';
 import 'package:shop_app/widgets/shared/load_error.dart';
 import 'package:shop_app/widgets/shared/loading_indicator.dart';
 import 'package:shop_app/widgets/shared/stateful_wrapper.dart';
@@ -19,9 +21,13 @@ class HomeScreen extends StatelessWidget {
           actions: <Widget>[
             IconButton(
               icon: Badge(
-                badgeContent: Text(
-                  '3',
-                  style: TextStyle(color: Colors.white),
+                badgeContent: Consumer<CartModel>(
+                  builder: (context, cartModel, child) {
+                    return Text(
+                      "${cartModel.totalItems}",
+                      style: TextStyle(color: Colors.white),
+                    );
+                  },
                 ),
                 child: Icon(Icons.shopping_cart),
               ),
@@ -46,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                     onRetryPressed: () => productModel.fetchAll(),
                   );
                 }
-                return Text('There are ${productModel.products.length} items');
+                return ProductList(productModel.products);
               },
             ),
           ),

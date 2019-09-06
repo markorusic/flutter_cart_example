@@ -11,7 +11,7 @@ class ProductService {
       final products = (json.decode(productsJson)['data'] as List)
           .map((i) => Product.fromJson(i))
           .toList();
-      return Future.delayed(Duration(milliseconds: 3000), () => products);
+      return Future.delayed(Duration(milliseconds: 0), () => products);
     } catch (error) {
       log('Error parsing products json: ' + error.toString());
       throw new Exception('Unable to parse products as json');
