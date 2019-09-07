@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:shop_app/domain/Product.dart';
+import 'package:shop_app/locator.dart';
 import 'package:shop_app/services/product_service.dart';
 
 class ProductModel extends ChangeNotifier {
-  static final _productService = ProductService();
+  final _productService = locator<ProductService>();
 
   final List<Product> products = [];
   var loading = false;
