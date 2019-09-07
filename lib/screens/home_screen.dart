@@ -40,6 +40,7 @@ class HomeScreen extends StatelessWidget {
             child: DataContainer(
               loading: productModel.loading,
               error: productModel.error,
+              onRetryPressed: productModel.fetchAll,
               child: ProductList(productModel.products),
             ),
           ),
