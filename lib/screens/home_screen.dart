@@ -15,8 +15,7 @@ class HomeScreen extends StatelessWidget {
     var productModel = Provider.of<ProductModel>(context);
 
     return StatefulWrapper(
-      onInit: () =>
-          Provider.of<ProductModel>(context, listen: false).fetchAll(),
+      onInit: () => productModel.fetchAll(),
       child: Scaffold(
         appBar: AppBar(
           title: Text('Products'),

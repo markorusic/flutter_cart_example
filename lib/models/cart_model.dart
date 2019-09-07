@@ -9,6 +9,8 @@ class CartModel extends ChangeNotifier {
 
   int get totalItems => products.length;
 
+  bool get isEmpty => totalItems == 0;
+
   void add(Product product) {
     products.add(product);
     notifyListeners();
@@ -29,5 +31,10 @@ class CartModel extends ChangeNotifier {
     } else {
       add(product);
     }
+  }
+
+  void checkout() {
+    products.clear();
+    notifyListeners();
   }
 }
