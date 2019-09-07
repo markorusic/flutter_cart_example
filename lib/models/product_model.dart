@@ -10,7 +10,7 @@ class ProductModel extends ChangeNotifier {
   var loading = false;
   Error error;
 
-  void fetchAll() async {
+  Future<void> fetchAll() async {
     loading = true;
     notifyListeners();
     try {
