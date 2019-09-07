@@ -2,11 +2,11 @@ import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/models/cart_model.dart';
-import 'package:shop_app/models/product_model.dart';
-import 'package:shop_app/widgets/product_list.dart';
-import 'package:shop_app/widgets/shared/data_container.dart';
-import 'package:shop_app/widgets/shared/stateful_wrapper.dart';
+import 'package:flutter_cart_example/models/cart_model.dart';
+import 'package:flutter_cart_example/models/product_model.dart';
+import 'package:flutter_cart_example/widgets/product_list.dart';
+import 'package:flutter_cart_example/widgets/shared/data_container.dart';
+import 'package:flutter_cart_example/widgets/shared/stateful_wrapper.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

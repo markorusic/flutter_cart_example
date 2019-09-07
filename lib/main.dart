@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/locator.dart';
-import 'package:shop_app/models/cart_model.dart';
-import 'package:shop_app/models/product_model.dart';
-import 'package:shop_app/screens/cart_screen.dart';
-import 'package:shop_app/screens/home_screen.dart';
+import 'package:flutter_cart_example/locator.dart';
+import 'package:flutter_cart_example/models/cart_model.dart';
+import 'package:flutter_cart_example/models/product_model.dart';
+import 'package:flutter_cart_example/screens/cart_screen.dart';
+import 'package:flutter_cart_example/screens/home_screen.dart';
 
 void main() {
   setupLocator();

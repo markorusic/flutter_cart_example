@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/domain/Product.dart';
-import 'package:shop_app/models/cart_model.dart';
+import 'package:flutter_cart_example/domain/Product.dart';
+import 'package:flutter_cart_example/models/cart_model.dart';
 
 class ProductList extends StatelessWidget {
   final List<Product> products;

@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
-import 'package:shop_app/services/category_service.dart';
-import 'package:shop_app/services/product_service.dart';
+import 'package:flutter_cart_example/services/category_service.dart';
+import 'package:flutter_cart_example/services/product_service.dart';
 
 GetIt locator = GetIt.I;
 

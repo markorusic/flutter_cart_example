@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shop_app/domain/Product.dart';
+import 'package:flutter_cart_example/domain/Product.dart';
 
 class CartModel extends ChangeNotifier {
   final List<Product> products = [];

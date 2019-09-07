@@ -1,4 +1,4 @@
-package com.example.shop_app;
+package com.example.flutter_cart_example;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

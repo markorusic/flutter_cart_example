@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shop_app/models/cart_model.dart';
-import 'package:shop_app/widgets/product_list.dart';
+import 'package:flutter_cart_example/models/cart_model.dart';
+import 'package:flutter_cart_example/widgets/product_list.dart';
 
 class CartScreen extends StatelessWidget {
   void _showSuccessfulCheckoutDialog(BuildContext context) {

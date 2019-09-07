@@ -3,7 +3,7 @@ import 'dart:developer';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:shop_app/domain/Product.dart';
+import 'package:flutter_cart_example/domain/Product.dart';
 
 class ProductService {
   static List<Product> _parseProducts(String productsJson) {

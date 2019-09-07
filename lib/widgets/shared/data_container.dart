@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:shop_app/widgets/shared/load_error.dart';
-import 'package:shop_app/widgets/shared/loading_indicator.dart';
+import 'package:flutter_cart_example/widgets/shared/load_error.dart';
+import 'package:flutter_cart_example/widgets/shared/loading_indicator.dart';
 
 class DataContainer extends StatelessWidget {
   final bool loading;

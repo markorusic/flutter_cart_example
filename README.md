@@ -1,4 +1,4 @@
-# shop_app
+# flutter_cart_example
 
 A new Flutter project.
 

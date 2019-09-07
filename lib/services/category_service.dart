@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:flutter/services.dart';
-import 'package:shop_app/domain/Category.dart';
+import 'package:flutter_cart_example/domain/Category.dart';
 
 class CategoryService {
   Future<List<Category>> fetchAll() async {

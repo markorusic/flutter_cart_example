@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:shop_app/domain/Product.dart';
-import 'package:shop_app/locator.dart';
-import 'package:shop_app/services/product_service.dart';
+import 'package:flutter_cart_example/domain/Product.dart';
+import 'package:flutter_cart_example/locator.dart';
+import 'package:flutter_cart_example/services/product_service.dart';
 
 class ProductModel extends ChangeNotifier {
   final _productService = locator<ProductService>();
