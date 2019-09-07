@@ -7,16 +7,14 @@ import 'package:shop_app/widgets/product_list.dart';
 class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var cart = Provider.of<CartModel>(context);
     return Scaffold(
       appBar: AppBar(
         title: Text('Cart'),
       ),
       body: Center(
         child: Container(
-          child: Consumer<CartModel>(
-            builder: (context, cartModel, child) =>
-                ProductList(cartModel.products),
-          ),
+          child: ProductList(cart.products),
         ),
       ),
     );
